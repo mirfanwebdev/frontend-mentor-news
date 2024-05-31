@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import logo from "@/app/assets/logo.svg";
 
 interface NavItem {
     href: string
@@ -13,10 +15,11 @@ export default function Navigation() {
         { href: "/trending", name: "Trending" },
         { href: "/categories", name: "Categories" },
     ]
+
     return (
-        <nav className="flex justify-between">
-            <div>logo</div>
-            <div className="flex gap-4">
+        <nav className="border flex justify-between items-center">
+            <Image src={logo} alt="logo" width={80} height={80}/>
+            <div className="flex gap-6">
                 {navItems.map((item) => (
                     <Link key={item.href} href={item.href}>{item.name}</Link>
                 ))}

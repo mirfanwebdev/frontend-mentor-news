@@ -1,30 +1,18 @@
+import Image from "next/image";
+import { topStories } from "../libs/topStories";
 export default function TopStories() {
     return (
         <section className="flex justify-between">
-            <div className="border flex gap-2">
-                <div>story-image</div>
-                <div className="flex flex-col">
-                    <h2>01</h2>
-                    <h3>Hydrogen Electric Card</h3>
-                    <p>Will hydrogen-fueled car get caught in trend.</p>
+            {topStories.map((story) => (
+                <div key={story.id} className="border flex gap-2">
+                    <Image src={story.img} alt="story-image" width={80} height={100} />
+                    <div className="flex flex-col">
+                        <h2>{story.number}</h2>
+                        <h3>{story.name}</h3>
+                        <p>{story.content}</p>
+                    </div>
                 </div>
-            </div>
-            <div className="border flex gap-2">
-                <div>story-image</div>
-                <div className="flex flex-col">
-                    <h2>01</h2>
-                    <h3>Hydrogen Electric Card</h3>
-                    <p>Will hydrogen-fueled car get caught in trend.</p>
-                </div>
-            </div>
-            <div className="border flex gap-2">
-                <div>story-image</div>
-                <div className="flex flex-col">
-                    <h2>01</h2>
-                    <h3>Hydrogen Electric Card</h3>
-                    <p>Will hydrogen-fueled car get caught in trend.</p>
-                </div>
-            </div>
+            ))}
         </section>
     )
 }
