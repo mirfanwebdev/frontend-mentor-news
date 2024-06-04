@@ -2,29 +2,14 @@ import { sideStories } from "../libs/sideStories"
 
 export default function Stories() {
     return (
-        <aside className="border p-4">
-            <h2>New</h2>
+        <aside className="border p-6 bg-darkBlue text-offWhite w-2/3">
+            <h2 className="text-3xl font-bold text-softOrange">New</h2>
             {sideStories.map((story) => (
-                <div key={story.id} className="border">
-                    <h3>{story.title}</h3>
-                    <p>{story.content}</p>
+                <div key={story.id} className="py-7 border-b border-darkGrayishBlue">
+                    <h3 className=" font-bold text-xl">{story.title}</h3>
+                    <p className=" text-grayishBlue">{story.content}</p>
                 </div>
             ))}
-            {/* <div className="border">
-                <h3>Hydrogen Electric Card</h3>
-                <p>Will hydrogen-fueled car get caught in trend.</p>
-            </div> */}
-            {/* <div className="border">
-                <h3>Hydrogen Electric Card</h3>
-                <p>Will hydrogen-fueled car get caught in trend.</p>
-            </div>
-            <div className="border">
-                <h3>Hydrogen Electric Card</h3>
-                <p>Will hydrogen-fueled car get caught in trend.</p>
-            </div><div className="border">
-                <h3>Hydrogen Electric Card</h3>
-                <p>Will hydrogen-fueled car get caught in trend.</p>
-            </div> */}
         </aside>
     )
 }

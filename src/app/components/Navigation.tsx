@@ -17,9 +17,9 @@ export default function Navigation() {
     ]
 
     return (
-        <nav className="border flex justify-between items-center">
-            <Image src={logo} alt="logo" width={80} height={80}/>
-            <div className="flex gap-6">
+        <nav className="flex justify-between items-center">
+            <Image src={logo} alt="logo" width={70} />
+            <div className="flex gap-12 text-darkGrayishBlue">
                 {navItems.map((item) => (
                     <Link key={item.href} href={item.href}>{item.name}</Link>
                 ))}

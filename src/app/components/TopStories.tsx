@@ -4,12 +4,12 @@ export default function TopStories() {
     return (
         <section className="flex justify-between">
             {topStories.map((story) => (
-                <div key={story.id} className="border flex gap-2">
-                    <Image src={story.img} alt="story-image" width={80} height={100} />
+                <div key={story.id} className="flex gap-3 w-1/3">
+                    <Image src={story.img} alt="story-image" width={80} />
                     <div className="flex flex-col">
-                        <h2>{story.number}</h2>
-                        <h3>{story.name}</h3>
-                        <p>{story.content}</p>
+                        <h2 className="text-softRed text-2xl font-bold">{story.number}</h2>
+                        <h3 className="font-bold">{story.name}</h3>
+                        <p className="text-darkGrayishBlue text-sm">{story.content}</p>
                     </div>
                 </div>
             ))}
