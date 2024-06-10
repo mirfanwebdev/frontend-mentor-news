@@ -5,9 +5,9 @@ import TopStories from "./components/TopStories";
 
 export default function Home() {
   return (
-    <main className="py-16 px-44 text-darkBlue">
+    <main className="py-4 px-4 text-darkBlue sm:py-16 sm:px-44">
       <Navigation />
-      <div className="flex gap-7 my-12">
+      <div className="flex flex-col sm:flex-row gap-7 my-12">
         <Headlines />
         <Stories/>
       </div>
